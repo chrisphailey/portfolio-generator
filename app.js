@@ -6,17 +6,41 @@ const inquirer = require('inquirer');
             {
                 type: 'input',
                 name: 'name',
-                message: 'What is your name?'
+                message: 'What is your name?',
+                validate: nameInput => {
+                    if (nameInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your name!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'github',
-                message: 'Enter your Github Username'
+                message: 'Enter your Github Username',
+                validate: nameInput => {
+                    if (nameInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your name!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'about',
-                message: 'Provide some information about yourself:'
+                message: 'Provide some information about yourself:',
+                validate: nameInput => {
+                    if (nameInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your name!');
+                        return false;
+                    }
+                }
             }
         ]);
     };
@@ -51,7 +75,15 @@ Add a New Project
         {
           type: 'input',
           name: 'link',
-          message: 'Enter the GitHub link to your project. (Required)'
+          message: 'Enter the GitHub link to your project. (Required)',
+          validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your name!');
+                return false;
+            }
+        }
         },
         {
           type: 'confirm',
